@@ -1,0 +1,170 @@
+/* imports */
+/* Reset and base styles  */
+* {
+  padding: 0px;
+  margin: 0px;
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* Links */
+a, a:link, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* Common */
+aside, nav, footer, header, section, main {
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul, ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Form */
+input, textarea, button, select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button, input[type=submit] {
+  display: inline-block;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input:focus, input:active,
+button:focus, button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+  --main-bg: white;
+  --main-font: "PT Root UI", Arial, san-serif;
+}
+
+/* add fonts */
+@font-face {
+  font-family: "PT Root UI";
+  font-weight: 400;
+  src: url(fonts/pt-root-ui_regular.ttf);
+  src: url(fonts/pt-root-ui_regular.eot?#iefix) format("embedded-opentype"), url(fonts/pt-root-ui_regular.otf) format("otf"), url(fonts/pt-root-ui_regular.svg#pt-root-ui_regular) format("svg"), url(fonts/pt-root-ui_regular.ttf) format("truetype"), url(fonts/pt-root-ui_regular.woff) format("woff"), url(fonts/pt-root-ui_regular.woff2) format("woff2");
+}
+/* main styles */
+html {
+  height: 100vh;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--main-bg);
+  font-size: 15px;
+}
+body div {
+  font-size: 18px;
+  font-weight: 400;
+}
+body.p {
+  font-size: 600;
+}
+body .t-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: arial, sans-serif;
+  font-size: 2em;
+  font-weight: 900;
+  color: #333;
+  margin-bottom: 20px;
+  text-shadow: 3px 3px 2px rgb(150, 146, 148);
+}
+
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+.box input {
+  opacity: 0;
+  position: absolute;
+  pointer-events: none;
+}
+.box p {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.box input:focus ~ label {
+  outline: -webkit-focus-ring-color auto 5px;
+}
+.box input:checked + p {
+  -webkit-line-clamp: unset;
+}
+.box [for=expanded] span:last-of-type {
+  display: none;
+}
+.box input[type=checkbox]:checked ~ [for=expanded] span:first-of-type {
+  display: none;
+}
+.box input[type=checkbox]:checked ~ [for=expanded] span:last-of-type {
+  display: inline-block;
+}
